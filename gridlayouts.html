@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layouts</title>
+<style>
+    .container{
+       display: grid;
+       grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+       grid-gap: 20px;
+       grid-auto-rows: minmax(100px,auto);
+       grid-auto-columns: minmax(50px,auto);
+       column-gap: 50px;
+       row-gap: 50px;
+    }
+    .items{
+        background-color: aqua;
+        border-radius: 3px ;
+        border: 3px green solid;
+    }
+    
+
+    
+    #item1{
+        grid-column-start: 1;
+        grid-column-end: 7;
+    } 
+    .item_1_container{
+        display: grid;
+        grid-template-columns: repeatr(3, 1fr);
+    }
+    .nested_item{
+        border:3px greenyellow solid ;
+        border-radius:3px ;                      
+    }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item_1_container" id="item1">
+            <div class="nested_item">size1</div>
+            <div class="nested_item">size2</div>
+            <div class="nested_item">size3</div>
+           
+        </div>
+        <div class="items" id="item2">box2</div>
+        <div class="items" id="item3">box3</div>
+        <div class="items "id="item4">box4</div>
+        <div class="items" id="item5">box5</div>
+    </div>
+
+    
+</body>
+</html>
